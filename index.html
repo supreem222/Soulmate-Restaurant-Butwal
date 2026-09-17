@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulmate Cafe & Restaurant | Kalikanagar, Butwal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            800: '#1C1917',
+                            900: '#12100E',
+                            950: '#0D0B0A',
+                        },
+                        amber: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        },
+                        cream: {
+                            100: '#FEF3C7',
+                            50: '#FFFBEB',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Alpine JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-obsidian-950 text-cream-50 font-sans antialiased selection:bg-amber-500 selection:text-obsidian-950">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-obsidian-900/90 backdrop-blur-md border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-3xl font-black tracking-wider gold-gradient-text">
+                        SOULMATE
+                    </span>
+                    <span class="text-xs uppercase tracking-widest text-amber-400/80 border-l border-amber-500/30 pl-3">Cafe & Restaurant</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                    <a href="#promos" class="hover:text-amber-400 transition-colors">Offers</a>
+                    <a href="#full-menu" class="hover:text-amber-400 transition-colors">Complete Menu</a>
+                    <a href="#reviews" class="hover:text-amber-400 transition-colors">Reviews</a>
+                    <!-- Click to Dial Link -->
+                    <a href="tel:+9779804487112" class="bg-gradient-to-r from-amber-500 to-amber-600 text-obsidian-950 font-extrabold px-6 py-2.5 rounded-full shadow-lg hover:shadow-amber-500/25 hover:scale-105 transition-all flex items-center">
+                        <i class="fa-solid fa-phone mr-2"></i>980-4487112
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-950/20 via-obsidian-950 to-obsidian-950"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-full px-5 py-2 text-xs sm:text-sm font-semibold mb-8">
+                <i class="fa-solid fa-star text-amber-400"></i>
+                <span>4.7 Rated on Google (459 Reviews)</span>
+            </div>
+            
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mb-6 leading-tight">
+                Where Culinary Art Meets <span class="gold-gradient-text">Unforgettable Moments</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Experience warm ambience, artisanal coffee, signature cocktails, and rich multi-cuisine dining at Kalikanagar Butwal-11.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#full-menu" class="bg-gradient-to-r from-amber-500 to-amber-600 text-obsidian-950 font-black text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-amber-500/30 hover:scale-105 transition-all flex items-center justify-center">
+                    <i class="fa-solid fa-utensils mr-2"></i> View Complete Menu
+                </a>
+                <!-- Click to Dial Link -->
+                <a href="tel:+9779804487112" class="border border-amber-500/40 bg-obsidian-900/60 text-amber-400 font-bold text-lg px-8 py-4 rounded-xl hover:bg-amber-500/10 hover:border-amber-400 transition-all flex items-center justify-center">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Reserve A Table
+                </a>
+            </div>
+
+            <!-- Quick Key Metrics -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-center border-t border-amber-500/10 pt-8">
+                <div class="p-4 rounded-xl bg-obsidian-900/40 border border-amber-500/10">
+                    <i class="fa-solid fa-martini-glass-citrus text-amber-400 text-2xl mb-2"></i>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-stone-300">Cocktails & Bar</p>
+                </div>
+                <div class="p-4 rounded-xl bg-obsidian-900/40 border border-amber-500/10">
+                    <i class="fa-solid fa-wheelchair text-amber-400 text-2xl mb-2"></i>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-stone-300">Wheelchair Accessible</p>
+                </div>
+                <div class="p-4 rounded-xl bg-obsidian-900/40 border border-amber-500/10">
+                    <i class="fa-solid fa-square-parking text-amber-400 text-2xl mb-2"></i>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-stone-300">Free Parking Lot</p>
+                </div>
+                <div class="p-4 rounded-xl bg-obsidian-900/40 border border-amber-500/10">
+                    <i class="fa-solid fa-fire text-amber-400 text-2xl mb-2"></i>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-stone-300">Hookah Lounge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers & Promotional Section -->
+    <section id="promos" class="py-20 bg-obsidian-900/50 relative border-t border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">Promotional Menus & Offers</h2>
+                <div class="h-1 w-20 bg-amber-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Promo 1 -->
+                <div class="bg-obsidian-800/60 border border-amber-500/20 rounded-2xl p-6 relative overflow-hidden group hover:border-amber-500/60 gold-border-glow transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <span class="bg-amber-500 text-obsidian-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">Beer Combo</span>
+                    <h3 class="text-2xl font-bold text-white mt-4 mb-2">1 KG Chicken Wings</h3>
+                    <p class="text-stone-300 text-sm mb-4">Marinated in selected spices. Includes 1 FREE Bottle of Beer!</p>
+                    <div class="text-2xl font-black text-amber-400">Rs. 1,299</div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="bg-obsidian-800/60 border border-amber-500/20 rounded-2xl p-6 relative overflow-hidden group hover:border-amber-500/60 gold-border-glow transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <span class="bg-rose-500 text-white font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">Valentine's Menu</span>
+                    <h3 class="text-2xl font-bold text-white mt-4 mb-2">You & Me (Art of Love)</h3>
+                    <p class="text-stone-300 text-sm mb-2">African roast chicken with red sour sauce.</p>
+                    <p class="text-xs text-rose-300 mb-4">• Berry Berry Sweetheart Welcome Drink<br>• Strawberry Cake with Berry Compote</p>
+                    <div class="text-xl font-black text-rose-400">Couple Special</div>
+                </div>
+
+                <!-- Promo 3 -->
+                <div class="bg-obsidian-800/60 border border-amber-500/20 rounded-2xl p-6 relative overflow-hidden group hover:border-amber-500/60 gold-border-glow transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <span class="bg-emerald-500 text-obsidian-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">Shrawan Special</span>
+                    <h3 class="text-2xl font-bold text-white mt-4 mb-2">Vegetable Platter Combo</h3>
+                    <p class="text-stone-300 text-sm mb-4">5 combination dishes paired with a refreshing cold drink.</p>
+                    <div class="text-xl font-black text-emerald-400">Seasonal Feast</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLETE CATEGORIZED MENU SECTION -->
+    <section id="full-menu" class="py-20" x-data="{ search: '', activeCategory: 'all' }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-4xl font-black text-white mb-2">Full Dining & Bar Menu</h2>
+                <p class="text-stone-400">Browse all signature dishes, clay pot biryanis, and handcrafted cocktails</p>
+                <div class="h-1 w-20 bg-amber-500 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Interactive Search Bar -->
+            <div class="mb-10 max-w-lg mx-auto">
+                <div class="relative">
+                    <input type="text" x-model="search" placeholder="Type to search dish name..." 
+                        class="w-full bg-obsidian-900 border border-amber-500/30 rounded-full px-6 py-3.5 pl-12 text-white placeholder-stone-500 focus:outline-none focus:border-amber-400 transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-amber-400"></i>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button @click="activeCategory = 'all'" :class="activeCategory === 'all' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">All Items</button>
+                <button @click="activeCategory = 'khana'" :class="activeCategory === 'khana' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Khana & Fried Rice</button>
+                <button @click="activeCategory = 'indian'" :class="activeCategory === 'indian' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Indian & Biryani</button>
+                <button @click="activeCategory = 'momo'" :class="activeCategory === 'momo' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Mo:Mo & Chowmein</button>
+                <button @click="activeCategory = 'snacks'" :class="activeCategory === 'snacks' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Appetizers & Meat</button>
+                <button @click="activeCategory = 'pizza'" :class="activeCategory === 'pizza' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Pizza, Burgers & Pasta</button>
+                <button @click="activeCategory = 'special'" :class="activeCategory === 'special' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Art of Love Specials</button>
+                <button @click="activeCategory = 'drinks'" :class="activeCategory === 'drinks' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Coffee & Shakes</button>
+                <button @click="activeCategory = 'bar'" :class="activeCategory === 'bar' ? 'bg-amber-500 text-obsidian-950 font-black' : 'bg-obsidian-900 text-stone-300 hover:text-white border border-amber-500/10'" class="px-5 py-2 rounded-full text-xs sm:text-sm transition-all">Cocktails & Hookah</button>
+            </div>
+
+            <!-- Complete Categorized Menu Data Grid -->
+            <div class="space-y-12">
+
+                <!-- Section: Chicken Fried Rice & Khana -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'khana')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-bowl-rice mr-2"></i>Chicken Fried Rice & Khana Sets</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Fried Rice</span><span class="text-amber-400 font-bold">Rs. 280</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mix Fried Rice</span><span class="text-amber-400 font-bold">Rs. 340</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Vegetable Khana Set</span><span class="text-amber-400 font-bold">Rs. 350</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Khana Set</span><span class="text-amber-400 font-bold">Rs. 450</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mutton Khana Set</span><span class="text-amber-400 font-bold">Rs. 550</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Fish Khana Set</span><span class="text-amber-400 font-bold">Rs. 470</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Indian & Biryani -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'indian')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-pepper-hot mr-2"></i>Indian & Clay Pot Biryani</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Matka Biryani (VEG / Chicken / Mutton)</span><span class="text-amber-400 font-bold">Rs. 349 / 409 / 529</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mix Vegetables Curry</span><span class="text-amber-400 font-bold">Rs. 310</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Dal Fry</span><span class="text-amber-400 font-bold">Rs. 200</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mushroom Kadai / Mutter Masala</span><span class="text-amber-400 font-bold">Rs. 390</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mushroom Curry</span><span class="text-amber-400 font-bold">Rs. 350</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Fish Curry</span><span class="text-amber-400 font-bold">Rs. 450</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Kadai / Chicken Curry</span><span class="text-amber-400 font-bold">Rs. 400 / 390</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Kadai Paneer</span><span class="text-amber-400 font-bold">Rs. 415</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Mutton Curry</span><span class="text-amber-400 font-bold">Rs. 490</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Plain / Jeera Rice</span><span class="text-amber-400 font-bold">Rs. 190 / 220</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Vegetables Pulao</span><span class="text-amber-400 font-bold">Rs. 250</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Tawa Roti / Paratha (Kerala / Lachha)</span><span class="text-amber-400 font-bold">Rs. 30 / 50</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Mo:Mo & Noodles -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'momo')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-dumpling mr-2"></i>Mo:Mo & Chowmeins</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Steam Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 160 / 190</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">C Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 210 / 240</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Kothey Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 190 / 210</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Jhol Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 210 / 250</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Fry Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 200 / 220</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Sukuti Momo (VEG / Chicken)</span><span class="text-amber-400 font-bold">Rs. 260 / 300</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chowmein (Veg / Egg / Chicken / Mix)</span><span class="text-amber-400 font-bold">Rs. 160 / 190 / 200 / 270</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Thukpa (Vegetable / Chicken)</span><span class="text-amber-400 font-bold">Rs. 210 / 260</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Appetizers & Meat -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'snacks')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-drumstick-bite mr-2"></i>Appetizers & Grilled Meat</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">French Fries / Peanut Sadeko</span><span class="text-amber-400 font-bold">Rs. 200 - 220</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chau Chau Sadeko / Bhatmas Sadeko</span><span class="text-amber-400 font-bold">Rs. 180 / 250</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Aloo Sadeko / Jeera / Timur</span><span class="text-amber-400 font-bold">Rs. 200 / 240 / 250</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Corn Salt & Pepper</span><span class="text-amber-400 font-bold">Rs. 270</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Sadeko / Chicken Chhoila</span><span class="text-amber-400 font-bold">Rs. 360</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Duck Chhoila</span><span class="text-amber-400 font-bold">Rs. 450</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Timur Chicken</span><span class="text-amber-400 font-bold">Rs. 390</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Smokey Grill Chicken Tikka</span><span class="text-amber-400 font-bold">Rs. 399</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Sizzler</span><span class="text-amber-400 font-bold">Rs. 550</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Hekula Fry / Mutton Chukka</span><span class="text-amber-400 font-bold">Rs. 450 / 460</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Smokey Mutton Dameko</span><span class="text-amber-400 font-bold">Rs. 540</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Sausages Fry or Grilled / Fish Fry</span><span class="text-amber-400 font-bold">Rs. 300 / 400</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Pakora (Mix Veg / Mushroom / Paneer)</span><span class="text-amber-400 font-bold">Rs. 330 / 335 / 390</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Pizza, Burgers & Pasta -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'pizza')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-pizza-slice mr-2"></i>Pizzas, Burgers & Pasta</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Margherita Pizza (Med / Lrg)</span><span class="text-amber-400 font-bold">Rs. 360 / 570</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Fungi Rosa Mushroom Pizza</span><span class="text-amber-400 font-bold">Rs. 410 / 590</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Soulmate Special Chicken Pizza</span><span class="text-amber-400 font-bold">Rs. 460 / 670</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Chicken Burger / Veg Burger</span><span class="text-amber-400 font-bold">Rs. 220 / 190</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Country Club Chicken Sandwich</span><span class="text-amber-400 font-bold">Rs. 380</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Soulmate Pink Sauce Spaghetti</span><span class="text-amber-400 font-bold">Rs. 450</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Quesadilla (Chicken / Paneer)</span><span class="text-amber-400 font-bold">Rs. 340 / 360</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Art of Love Signature Specials -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'special')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-crown mr-2"></i>The Art of Love - Chef Specials</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Kungfu Noodles (Wild Mushroom & Chicken)</span><span class="text-amber-400 font-bold">Rs. 350</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Hot Buffalo Chicken Wings + Wedges</span><span class="text-amber-400 font-bold">Rs. 370</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Lekali Chicken with Lekali Spice</span><span class="text-amber-400 font-bold">Rs. 370</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Cajun Pan Grill Chicken with Salad</span><span class="text-amber-400 font-bold">Rs. 390</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Grill Whole Fish (Nepali Spices)</span><span class="text-amber-400 font-bold">Rs. 590</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Deep Chilly Malai MOMO</span><span class="text-amber-400 font-bold">Rs. 350 / 380</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Drinks & Coffee -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'drinks')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-mug-hot mr-2"></i>Coffee, Tea & Shakes</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Espresso / Americano</span><span class="text-amber-400 font-bold">Rs. 120 / 140</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Cafe Latte / Cappuccino</span><span class="text-amber-400 font-bold">Rs. 190</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Soulmate Special Cold Coffee</span><span class="text-amber-400 font-bold">Rs. 300</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Frappuccino (Mocha / Oreo / Kitkat)</span><span class="text-amber-400 font-bold">Rs. 300 - 330</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Smoothies & Milkshakes</span><span class="text-amber-400 font-bold">Rs. 230 - 280</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Lassi (Plain / Banana / Soulmate Special)</span><span class="text-amber-400 font-bold">Rs. 190 / 210 / 380</span></div>
+                    </div>
+                </div>
+
+                <!-- Section: Cocktails & Hookah -->
+                <div x-show="(activeCategory === 'all' || activeCategory === 'bar')" class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-400 border-b border-amber-500/20 pb-2"><i class="fa-solid fa-martini-glass-citrus mr-2"></i>Bar, Cocktails & Hookah</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Tequila Sunrise / Mojito</span><span class="text-amber-400 font-bold">Rs. 599 / 560</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Long Island Ice Tea</span><span class="text-amber-400 font-bold">Rs. 725</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Sex on the Beach / Espresso Martini</span><span class="text-amber-400 font-bold">Rs. 600 / 580</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Soulmate House on the Rock</span><span class="text-amber-400 font-bold">Rs. 690</span></div>
+                        <div class="bg-obsidian-900/60 p-4 rounded-xl border border-amber-500/10 flex justify-between items-center"><span class="text-stone-200">Hookah (Regular / Iced Milk)</span><span class="text-amber-400 font-bold">Rs. 350 / 550</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="reviews" class="py-20 bg-obsidian-900/50 border-t border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex justify-center items-center space-x-1 text-amber-400 text-lg mb-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white">4.7 Rating on Google</h2>
+                <p class="text-stone-400 text-sm mt-1">Based on over 459 verified local customer reviews</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-obsidian-800/40 p-6 rounded-2xl border border-amber-500/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-amber-500 text-obsidian-950 font-black rounded-full flex items-center justify-center">M</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-white text-sm">Madan Rajali</h4>
+                            <p class="text-xs text-stone-400">Local Guide</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-300 text-sm leading-relaxed">"Cozy, peaceful atmosphere, perfect for spending quality time with friends and family. Delicious food!"</p>
+                </div>
+
+                <div class="bg-obsidian-800/40 p-6 rounded-2xl border border-amber-500/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-amber-500 text-obsidian-950 font-black rounded-full flex items-center justify-center">R</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-white text-sm">Rohit Pevekar</h4>
+                            <p class="text-xs text-stone-400">Local Guide</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-300 text-sm leading-relaxed">"Fragrant, spice-packed chicken biryani and juicy meat in perfect harmony. Timur chicken stole the show!"</p>
+                </div>
+
+                <div class="bg-obsidian-800/40 p-6 rounded-2xl border border-amber-500/10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-amber-500 text-obsidian-950 font-black rounded-full flex items-center justify-center">S</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-white text-sm">Samir Dumre</h4>
+                            <p class="text-xs text-stone-400">Customer</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-300 text-sm leading-relaxed">"Outstanding cafe with cool ambience, delicious foods, and friendly staff environment. Just like a wow!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="bg-obsidian-950 border-t border-amber-500/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold gold-gradient-text mb-4">Soulmate Cafe</h3>
+                <p class="text-stone-400 text-sm mb-4">Kalikanagar Butwal-11, Butwal 32907</p>
+                <p class="text-xs text-stone-500">Average Spend: Rs 1–3,000 per person</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-white mb-4">Contact & Hours</h4>
+                <!-- Click to Dial Link -->
+                <p class="text-stone-300 text-sm">
+                    <a href="tel:+9779804487112" class="hover:text-amber-400 transition-colors inline-flex items-center">
+                        <i class="fa-solid fa-phone text-amber-400 mr-2"></i>980-4487112
+                    </a>
+                </p>
+                <p class="text-stone-300 text-sm mt-2"><i class="fa-solid fa-clock text-amber-400 mr-2"></i>Open Daily · Closes 10 PM</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-white mb-4">Accepted Payments</h4>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-obsidian-900 border border-amber-500/20 px-3 py-1.5 rounded-md text-amber-300">Credit Cards</span>
+                    <span class="bg-obsidian-900 border border-amber-500/20 px-3 py-1.5 rounded-md text-amber-300">Debit Cards</span>
+                    <span class="bg-obsidian-900 border border-amber-500/20 px-3 py-1.5 rounded-md text-amber-300">NFC Mobile Pay</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-stone-600 border-t border-obsidian-900 mt-12 pt-6">
+            &copy; 2026 Soulmate Cafe & Restaurant. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Init AOS Animation -->
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
+</body>
+</html>
